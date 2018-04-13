@@ -37,9 +37,7 @@ export default {
   	props:['fatherComponent'],
   	computed: mapState([
 	  	'itemNum', //第几题
-  		'level', //第几周
   		'itemDetail', //题目详情
-  		'timer', //计时器
 	]),
   	methods: {
   		...mapActions([
@@ -73,7 +71,6 @@ export default {
 	  	submitAnswer(){
 	  		if (this.choosedNum !== null) {
 	  			this.addNum(this.choosedId)
-	  			clearInterval(this.timer)
 	  			this.$router.push('score')
   			}else{
   				alert('您还没有选择答案哦')
