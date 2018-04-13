@@ -1,12 +1,13 @@
 import App from '../App'
-import home from '@/page/home/index'
-import item from '@/page/item/index'
 
-export default [
-
-    {    path: '/',
-        component: home
+export default [{
+        path: '/',
+        component: r => require.ensure([], () => r(require('../page/home')), 'home')
     }, {
         path: '/item',
-        component: item
+        component: r => require.ensure([], () => r(require('../page/item')), 'item')
+    }, {
+        path: '/score',
+        component: r => require.ensure([], () => r(require('../page/score')), 'score')
     }]
+

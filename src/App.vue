@@ -1,7 +1,7 @@
 <template>
 	<div>
     <h1>Question and Answer</h1>
-    <p>一个</p>
+    <p></p>
     	<router-view></router-view>
   </div>
 </template>
@@ -17,6 +17,8 @@ export default {
 
 <style>
   	body{
-      background-color: grey
+      background-color: #f6f6f6;
+      display: flex;
+      justify-content: center;
     }
 </style>
