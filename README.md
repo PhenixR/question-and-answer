@@ -1,6 +1,7 @@
 # Question & Answer
 
 > A Vue.js project
+基于vue ，vuex ，vuerouter实现的一个问答项目
 
 ## Build Setup
 
