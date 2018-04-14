@@ -9,7 +9,7 @@
     	</div>
     	<div v-if="fatherComponent == 'item'" class="item">
 			<div class="item_container">
-				<div class="qusetion">{{itemDetail[itemNum-1].topic_name}}</div>
+				<p class="qusetion">{{itemDetail[itemNum-1].topic_name}}</p>
 				<ul>
 					<li v-for="(item,index) in itemDetail[itemNum-1].topic_answer" @click="choosed(index, item.topic_answer_id)" class="item_list">
 						<span class="option_style" v-bind:class="{'has_choosed':choosedNum==index}">{{chooseType(index)}}</span>
@@ -17,8 +17,8 @@
 					</li>
 				</ul>
 			</div>
-			<span class="next" @click="nextItem" v-if="itemNum < itemDetail.length">下一题</span>
-			<span class="submit" v-else @click="submitAnswer">提交</span>
+			<button class="next" @click="nextItem" v-if="itemNum < itemDetail.length">下一题</button>
+			<button class="submit" v-else @click="submitAnswer">提交</button>
     	</div>
   	</section>
 </template>
@@ -85,6 +85,13 @@ export default {
 </script>
 
 <style>
+ul {
+	list-style-type: none;
+}
+button {
+	width: 100px;
+	margin-left: 20px;
+}
 .top_tips {
 	display: flex;
 	justify-content: center;
@@ -102,6 +109,7 @@ export default {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	padding-left: 75px;
 }
 .start {
 	cursor:pointer;
