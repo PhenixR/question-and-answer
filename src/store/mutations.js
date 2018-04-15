@@ -1,6 +1,5 @@
 const ADD_ITEMNUM = 'ADD_ITEMNUM'
 const REMBER_ANSWER = 'REMBER_ANSWER'
-const REMBER_TIME = 'REMBER_TIME'
 const INITIALIZE_DATA = 'INITIALIZE_DATA'
 export default {
 	//点击进入下一题

@@ -4,6 +4,7 @@
           <p class="your_score">{{score}}分!</p>
           <p>{{scoreTips}}</p>
       </div>
+      <router-link to="/" class="restart">重新答题</router-link>
   </div>
 </template>
 
